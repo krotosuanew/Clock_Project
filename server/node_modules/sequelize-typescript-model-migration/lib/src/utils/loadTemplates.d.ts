@@ -1,0 +1,12 @@
+export declare const loadMigrationTemplate: () => string;
+export declare const loadCreateTableTemplate: () => string;
+export declare const loadDropTableTemplate: () => string;
+export declare const loadAddIndexTemplate: () => string;
+export declare const loadRemoveIndexTemplate: () => string;
+export declare const loadAddForeignKeysTemplate: () => string;
+export declare const loadRemoveForeignKeysTemplate: () => string;
+export declare const loadAddColumnTemplate: () => string;
+export declare const loadRemoveColumnTemplate: () => string;
+export declare const loadAddUniqueConstraints: () => string;
+export declare const loadRemoveUniqueConstraints: () => string;
+export declare const loadAllTemplates: () => string[];

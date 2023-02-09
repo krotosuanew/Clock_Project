@@ -1,0 +1,24 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const orderController_1 = __importDefault(require("../controllers/orderController"));
+const checkRoleMiddleware_1 = __importDefault(require("../middleware/checkRoleMiddleware"));
+const express_validator_1 = require("express-validator");
+const global_1 = require("../dto/global");
+const orderRouter = (0, express_1.Router)();
+orderRouter.get('/exportOrder/', orderController_1.default.exportToExcel);
+orderRouter.get('/bill/', orderController_1.default.createBill);
+orderRouter.get('/downloadPhotos/', orderController_1.default.downloadPhotos);
+orderRouter.get('/statistics/', (0, checkRoleMiddleware_1.default)(global_1.ROLES.ADMIN), orderController_1.default.ordersStatistics);
+orderRouter.get('/:userId', (0, checkRoleMiddleware_1.default)(global_1.ROLES.CUSTOMER), (0, express_validator_1.param)("userId").not().isEmpty().isInt({ gt: 0 }), orderController_1.default.getUserOrders);
+orderRouter.get('/Master/:userId', (0, checkRoleMiddleware_1.default)(global_1.ROLES.MASTER), (0, express_validator_1.param)("userId").not().isEmpty().isInt({ gt: 0 }), orderController_1.default.getMasterOrders);
+orderRouter.get('/', (0, checkRoleMiddleware_1.default)(global_1.ROLES.ADMIN), orderController_1.default.getAllOrders);
+orderRouter.post("/", (0, express_validator_1.body)("name").not().isEmpty().isString().trim().escape(), (0, express_validator_1.body)("email").isEmail().isString().trim().escape(), (0, express_validator_1.body)("time").not().isEmpty(), (0, express_validator_1.body)("price").not().isEmpty().not().isString().isInt({ gt: 0 }), (0, express_validator_1.body)("cityId").not().isEmpty().not().isString().isInt({ gt: 0 }), (0, express_validator_1.body)("masterId").not().isEmpty().not().isString().isInt({ gt: 0 }), (0, express_validator_1.body)("sizeClockId").not().isEmpty().not().isString().isInt({ gt: 0 }), orderController_1.default.create);
+orderRouter.put("/:orderId", (0, checkRoleMiddleware_1.default)(global_1.ROLES.ADMIN), (0, express_validator_1.param)("orderId").not().isEmpty().isInt({ gt: 0 }), (0, express_validator_1.body)("name").not().isEmpty().isString().trim().escape(), (0, express_validator_1.body)("email").isEmail().isString().trim().escape(), (0, express_validator_1.body)("time").not().isEmpty(), (0, express_validator_1.body)("price").not().isEmpty().not().isString().isInt({ gt: 0 }), (0, express_validator_1.body)("cityId").not().isEmpty().not().isString().isInt({ gt: 0 }), (0, express_validator_1.body)("masterId").not().isEmpty().not().isString().isInt({ gt: 0 }), (0, express_validator_1.body)("sizeClockId").not().isEmpty().not().isString().isInt({ gt: 0 }), orderController_1.default.update);
+orderRouter.put("/statusChange/:orderId", (0, express_validator_1.param)("orderId").not().isEmpty().isInt({ gt: 0 }), orderController_1.default.statusChange);
+orderRouter.post("/payPal", orderController_1.default.payPalChange);
+orderRouter.delete("/:orderId", (0, checkRoleMiddleware_1.default)(global_1.ROLES.ADMIN), (0, express_validator_1.param)("orderId").not().isEmpty().isInt({ gt: 0 }), orderController_1.default.deleteOne);
+exports.default = orderRouter;

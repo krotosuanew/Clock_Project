@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Bill</title>
+    <style>
+        body {
+            font-style: normal;
+            font-family: Catamaran, sans-serif;
+            font-size: 17px;
+        }
+
+        .logo {
+            padding-top: 1px;
+            background-color: #ec6c02;
+            color: white;
+            height: 40px;
+            width: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .logo-name{
+            width: 200px;
+            margin: 10px auto;
+        }
+
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-style: initial;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .qr-code {
+            width: 300px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="logo">
+    <div class="logo-name">Clockwise Clockware</div>
+</div>
+
+<h1>Заказ №{{this.id}} выполнен</h1>
+<ul>
+    <li>Данные заказа:</li>
+    <li>Дата и время начала: {{this.dateStart}}</li>
+    <li>Дата и время конца: {{this.dateEnd}}</li>
+    <li>Тип услуги: {{this.clock}}</li>
+    <li>Город: {{this.city}}</li>
+    <li>Email пользователя: {{this.userEmail}}</li>
+    <li>Email мастера: {{this.masterEmail}}</li>
+    <li>Цена: ${{this.price}}</li>
+</ul>
+<div class="qr-code">
+    <img src={{this.qr}} alt="">
+</div>
+</body>
+</html>

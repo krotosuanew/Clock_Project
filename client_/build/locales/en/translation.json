@@ -1,0 +1,578 @@
+{
+  "startPage": {
+    "button": "Make order",
+    "aboutCompany": "Clockwise Clockware is engaged in the repair of grandfather clocks with home visits to customers.",
+    "firstCard": {
+      "title": "Small watch repair",
+      "description": "The small watch is slow, fast, stopped, stopped winding or started beeping\n  uncharacteristic\n  crackling / tapping? The worker will quickly determine the cause of the problem and fix it.",
+      "l1": "Watch diagnostics and repair",
+      "l2": "Repair, cleaning, lubrication, debugging of the mechanism",
+      "l3": "Glass replacement",
+      "l4": "Worker to handle in an hour"
+    },
+    "secondCard": {
+      "title": "Medium watch repair",
+      "description": "In the workshop, wall clocks of any complexity are repaired, the worker will repair and debug\n  medium sized modern watch.",
+      "l1": "Watch diagnostics and repair",
+      "l2": "Repair, cleaning, lubrication, debugging of the mechanism",
+      "l3": "Glass replacement",
+      "l4": "Worker to handle in 2 hours"
+    },
+    "nextCard": {
+      "title": "Big clock repair",
+      "description": "The worker can handle large/antique models of clocks, restore the movement of cuckoos, quartz, mechanical clocks with regular or quarter strikes.",
+      "l1": "Cleaning and lubricating the mechanism",
+      "l2": "Stroke Adjustment and Combat Adjustment",
+      "l3": "Making parts by hand (for antique watches)",
+      "l4": "Worker to handle in 3 hours"
+    }
+  },
+  "NavBar": {
+    "adminPanel": "Admin panel",
+    "orderList": "Order list",
+    "signIn": "Sign in",
+    "logOut": "Log out"
+  },
+  "AdminMenu": {
+    "orders": "Orders",
+    "cities": "Cities",
+    "masters": "Workers",
+    "clocks": "Clocks",
+    "users": "Users",
+    "statistics": "Statistics"
+  },
+  "CityList": {
+    "listName": "Cities",
+    "alertRemove": {
+      "successes": "Successfully remotely",
+      "fail": "Could not be deleted because there are workers in the city"
+    },
+    "addCity": "Add city",
+    "cityName": "City name",
+    "emptyList": "List empty",
+    "price": "Price per hour",
+    "removeCity": "Delete city",
+    "editCity": "Change city info"
+  },
+  "CreateCity": {
+    "topic": "Add city",
+    "name": "Enter the name of the city",
+    "price": "Price per hour of work of the worker",
+    "alertCreate": {
+      "successes": "City successfully created",
+      "fail": "Failed to create city"
+    },
+    "errors": {
+      "nameCity": "There is a city with this name",
+      "price": "Enter price",
+      "minPrice": "Min price 1"
+    }
+  },
+  "EditCity": {
+    "topic": "Change city details",
+    "name": "Enter city name",
+    "price": "Price per hour of the worker's work",
+    "alertEdit": {
+      "successes": "Name changed successfully",
+      "fail": "Failed to change name"
+    },
+    "errors": {
+      "nameCity": "A city with this name exists",
+      "price": "Enter price",
+      "minPrice": "Min Price 1"
+    }
+  },
+  "MasterList": {
+    "alertStatus": {
+      "successes": "Worker`s data changed successfully",
+      "fail": "Failed to change worker data"
+    },
+    "alertRemove": {
+      "successes": "Remote Successfully",
+      "fail": "Could not delete because worker has more orders"
+    },
+    "listName": "Workers",
+    "filter": {
+      "selectCity": "Select City",
+      "rating": "Rating",
+      "name": "By name"
+    },
+    "active": "Active",
+    "notActive": "Not Active",
+    "addMaster": "Add Worker",
+    "masterId": "Worker ID",
+    "userId": "User ID",
+    "name": "Name of worker",
+    "cities": "City(s)",
+    "rating": "Rating",
+    "reviews": "Comments",
+    "status": "Status",
+    "removeMaster": "Remove worker",
+    "editMaster": "Edit worker Data",
+    "more": "more",
+    "hide": "hide"
+  },
+  "CreateMaster": {
+    "alertCreate": {
+      "successes": "Worker added successfully",
+      "fail": "Failed to add worker"
+    },
+    "topic": "Add worker",
+    "name": "Enter the name of the worker",
+    "email": "Enter email",
+    "password": "Enter password",
+    "checkPassword": "Repeat password",
+    "rating": "Enter a rating from 0 to 5",
+    "errors": {
+      "email": "This email is already taken",
+      "emailInvalid": "Enter an email of the format: clock@clock.com",
+      "password": "Enter password",
+      "passwordLength": "Password must be 6 characters or more",
+      "passwordInvalid": "Passwords are not the same",
+      "checkPassword": "Repeat password",
+      "ratingMin": "Enter a number at least 0",
+      "ratingMax": "Enter a number no greater than 5"
+    }
+  },
+  "EditMaster": {
+    "alertEdit": {
+      "successes": "Worker`s data changed successfully",
+      "fail": "Failed to change worker data"
+    },
+    "topic": "Change worker options",
+    "name": "Specify the name of the worker",
+    "rating": "Enter a rating from 0 to 5",
+    "errors": {
+      "ratingMin": "Enter a number at least 0",
+      "ratingMax": "Enter a number no greater than 5"
+    }
+  },
+  "SelectorMasterCity": {
+    "label": "Select the city(s) where the worker works",
+    "error": "Please select city(s)"
+  },
+  "SizeClockList": {
+    "topic": "Clock sizes",
+    "removeClock": "Remove Clock",
+    "editClock": "Edit clock data",
+    "addClock": "Add Clock Clock",
+    "name": "Name of the watch",
+    "date": "Number of hours",
+    "alertRemove": {
+      "successes": "Remote Successfully",
+      "fail": "Unable to delete"
+    }
+  },
+  "CreateSizeClock": {
+    "topic": "Add new clock sizes",
+    "name": "Enter the name of the watch",
+    "date": "Select a time",
+    "alertCreate": {
+      "successes": "Clock size added",
+      "fail": "Failed to add clock size"
+    },
+    "errors": {
+      "name": "Name already taken",
+      "nameEmpty": "Enter the name of the watch",
+      "time": "Invalid time",
+      "timeEmpty": "Enter time"
+    }
+  },
+  "EditSizeClock": {
+    "topic": "Change clock data",
+    "name": "Enter the name of the watch",
+    "date": "Select a time",
+    "alertCreate": {
+      "successes": "Name changed successfully",
+      "fail": "Unable to change title"
+    },
+    "errors": {
+      "name": "Name already taken",
+      "nameEmpty": "Enter the name of the watch",
+      "time": "Invalid time",
+      "timeEmpty": "Enter time"
+    }
+  },
+  "UserList": {
+    "alertStatus": {
+      "successes": "User status changed",
+      "fail": "User status could not be changed"
+    },
+    "alertRemove": {
+      "successes": "Remote Successfully",
+      "fail": "Unable to delete because user has more orders"
+    },
+    "listName": "Users",
+    "addUser": "Add User",
+    "userId": "User ID",
+    "role": "Role",
+    "status": "Status",
+    "removeUser": "Remove User",
+    "editUser": "Edit user details",
+    "statusList": {
+      "active": "Active",
+      "notActive": "Not Active"
+    }
+  },
+  "CreateUser": {
+    "topic": "New user registration",
+    "name": "Please enter a name",
+    "alertCreate": {
+      "successes": "User added successfully",
+      "fail": "Failed to add user"
+    },
+    "email": "Enter email",
+    "password": "Enter password",
+    "checkPassword": "Repeat password",
+    "isMater": "Register as worker",
+    "errors": {
+      "email": "This email is already taken",
+      "emailInvalid": "Enter an email of the format: clock@clock.com",
+      "password": "Enter password",
+      "passwordLength": "Password must be 6 characters or more",
+      "passwordInvalid": "Passwords are not the same",
+      "checkPassword": "Retype Password"
+    }
+  },
+  "EditUser": {
+    "topic": "New user registration",
+    "name": "Please enter a name",
+    "email": "Enter email",
+    "password": "Enter password",
+    "checkPassword": "Repeat password",
+    "changePassword": "Change password",
+    "errors": {
+      "email": "This email is already taken",
+      "emailInvalid": "Enter an email of the format: clock@clock.com",
+      "password": "Enter password",
+      "passwordLength": "Password must be 6 characters or more",
+      "passwordInvalid": "Passwords are not the same",
+      "checkPassword": "Retype Password"
+    },
+    "alertEdit": {
+      "successes": "Successfully modified",
+      "fail": "Failed to change"
+    }
+  },
+  "OrderList": {
+    "noPhoto":"No photo",
+    "photoTop":"Photo",
+    "listName": "Order list",
+    "loadTable": "Download table",
+    "addOrder": "Add order",
+    "name": "Name",
+    "date": "Date and time",
+    "master": "worker",
+    "city": "City",
+    "pricePerHour": "Price Per Hour",
+    "hours": "Number of hours",
+    "totalPrice": "Total",
+    "status": "Status",
+    "photo": "Attached photos",
+    "removeOrder": "Remove order",
+    "editOrder": "Edit order",
+    "filter": {
+      "city": "Select city",
+      "master": "Select worker",
+      "name": "By name",
+      "startPrice": "Price from",
+      "endPrice": "Price up to",
+      "errPrice": "more",
+      "endData": "end date",
+      "startData": "start date",
+      "to": "to"
+    },
+    "alertStatus": {
+      "successes": "Order status changed successfully",
+      "fail": "Unable to change order status"
+    },
+    "alertRemove": {
+      "successes": "Remote Successfully",
+      "fail": "Unable to delete"
+    }
+  },
+  "EditOrder": {
+    "topic": "Edit order",
+    "currentMaster": "Current Master",
+    "alertEdit": {
+      "successes": "Order changed successfully",
+      "fail": "Unable to change order. Worker is busy"
+    },
+    "name": "Enter customer name",
+    "email": "Enter email",
+    "date": "Select order date",
+    "time": "Select a time",
+    "emptyList": "All workers are currently busy",
+    "freeMasters": "Free workers",
+    "nameMaster": "Worker name",
+    "rating": "Rating",
+    "city": "City",
+    "selectMaster": "Select worker",
+    "errors": {
+      "email": "Enter an email in the format: clock@clock.com",
+      "date": "Invalid date",
+      "time": "Invalid time",
+      "emptyTime": "Enter time",
+      "emptyDate": "Please enter a date"
+    },
+    "currentFreeMasters": "Check for free workers at the current time"
+  },
+  "Login": {
+    "alert": "Email verification required",
+    "topic": "Authorization",
+    "email": "Enter email",
+    "password": "Enter password",
+    "question": "Don't have an account?",
+    "toRegistration": "Register",
+    "signIn": "Sign In",
+    "errors": {
+      "wrongPassword": "Wrong password",
+      "email": "Enter an email in the format: clock@clock.com",
+      "wrongEmail": "This email does not exist",
+      "passwordLength": "Password must be 6 characters or more"
+    }
+  },
+  "Registration": {
+    "master": "Master Registration",
+    "cities": "Select cities of work",
+    "confirm": "confirm",
+    "alert": "Email verification required",
+    "topic": "Registration",
+    "name": "Enter your name",
+    "email": "Enter email",
+    "password": "Enter password",
+    "checkPassword": "Repeat password",
+    "question": "Do you have an account?",
+    "toLogin": "Login",
+    "button": "Register",
+    "agree": "I agree with everything",
+    "isMaster": "Register as worker",
+    "errors": {
+      "wrongPassword": "Wrong password",
+      "email": "Enter an email in the format: clock@clock.com",
+      "emailExist": "This email is already taken",
+      "wrongEmail": "This email is already taken",
+      "passwordLength": "Password must be 6 characters or more",
+      "passwordInvalid": "Passwords are not the same"
+    }
+  },
+  "OrderStepper": {
+    "alertEdit": {
+      "successes": "Order changed successfully",
+      "fail": "Unable to change order. Worker is busy"
+    },
+    "firstStep": "Fill out the order form",
+    "secondStep": "Select worker",
+    "nextStep": "Sending order",
+    "helperText": "Orders accepted from 8:00 am to 10:00 pm",
+    "name": "Enter your name",
+    "email": "Enter email",
+    "date": "Select order date",
+    "time": "Select a time",
+    "emptyList": "All workers are currently busy",
+    "freeMasters": "Free workers",
+    "nameMaster": "Worker name",
+    "rating": "Rating",
+    "city": "City",
+    "selectMaster": "Select worker",
+    "startPage": "Go to start page",
+    "Back": "Back",
+    "next": "Next",
+    "authorizationHeader": "Please login before continuing",
+    "authorization": "Login",
+    "changeData": "Do you want to change your personal data?",
+    "registration": "Do you want to register??",
+    "yesButton": "Yes",
+    "noButton": "No",
+    "loading": "Sending data. Please wait...",
+    "sendOrder": "Send order",
+    "orderCreated": "Order successfully created",
+    "sendOrderToMail": "Order details sent to email",
+    "reviews": "Reviews",
+    "orderInfo": {
+      "name": "Your name: ",
+      "email": "Your email: ",
+      "clock": "Selected clock size: ",
+      "city": "City where the order was made: ",
+      "date": "Order date: ",
+      "time": "Order time:",
+      "master": "Worker name:",
+      "price": "Service cost:"
+    },
+    "errors": {
+      "email": "Enter an email in the format: clock@clock.com",
+      "date": "Invalid date",
+      "time": "Invalid time",
+      "emptyTime": "Enter time",
+      "emptyDate": "Please enter a date",
+      "name": "Enter a name longer than 3 characters"
+    }
+  },
+  "AddPhoto": {
+    "topic": "You can add a photo:",
+    "buttonAdd": "Add photo:",
+    "errors": {
+      "format": "Invalid format. Requires JPEG/PNG",
+      "size": "Photo must be less than 1mb",
+      "photo": "Some photos already added"
+    }
+  },
+  "Customer": {
+    "list": "List of orders",
+    "filter": {
+      "city": "Select city",
+      "master": "Select worker",
+      "clock": "Select a clock",
+      "name": "By name",
+      "startPrice": "Price from",
+      "endPrice": "Price up to",
+      "errPrice": "more",
+      "endData": "end date",
+      "startData": "start date",
+      "to": "to"
+    },
+    "pay": "Pay",
+    "paid": "Paid",
+    "orderNumber": "№ order",
+    "name": "Name",
+    "time": "Order start",
+    "endTime": "End of order",
+    "clock": "Type of service",
+    "master": "Worker",
+    "city": "City",
+    "price": "Price",
+    "status": "Status",
+    "mark": "Score",
+    "infoButton": "Will be available after the order is completed",
+    "estimateTooltip": "Estimate worker work",
+    "estimateButton": "Estimate",
+    "addOrder": "Add Order"
+  },
+  "Master": {
+    "pdfError": "Order not completed. Unable to download check",
+    "statusAlert": {
+      "success": "Order status changed successfully",
+      "error": "Unable to change order status"
+    },
+    "bill": "Download bill",
+    "list": "List of orders",
+    "calendar": "Calendar",
+    "activate": "Administrator activation required",
+    "download": "download photos",
+    "noPhotos": "no photos",
+    "filter": {
+      "city": "Select city",
+      "user": "Select a user ID",
+      "userEmail": "Select User Email",
+      "clock": "Select a clock",
+      "name": "By name",
+      "startPrice": "Price from",
+      "endPrice": "Price up to",
+      "errPrice": "more",
+      "endData": "end date",
+      "startData": "start date",
+      "to": "to"
+    },
+    "orderNumber": "№ order",
+    "name": "Name",
+    "time": "Order start",
+    "endTime": "End of order",
+    "clock": "Type of service",
+    "city": "City",
+    "price": "Price",
+    "status": "Status",
+    "mark": "Score",
+    "infoButton": "Will be available after the order is completed",
+    "estimateTooltip": "Estimate worker work",
+    "estimateButton": "Estimate",
+    "addOrder": "Add Order"
+  },
+  "PayPal": {
+    "success": "Payment was successful!",
+    "toOrder": "Go to orders!",
+    "toStart": "Payment was successful!",
+    "error": "An error occurred. You can try again!",
+    "notPay": "Continue without payment",
+    "pay": "You can pay for the order now:"
+  },
+  "Statistics": {
+    "topic": "Statistics",
+    "back": "<Back",
+    "orders": "Orders:",
+    "ordersDiagram": "Number of orders/yes",
+    "circleDiagram": "Pie chart orders/city",
+    "topThree": "Top 3 workers",
+    "workersStatistics": "Workers Statistics",
+    "emptyData": "No data",
+    "name": "Name",
+    "rating": "Rating",
+    "totalOrders": "Total Orders",
+    "finishedOrders": "Completed Orders",
+    "unfinishedOrders": "Unfinished Orders",
+    "clock": "Service types",
+    "totalEarned": "Total Earned",
+    "filter": {
+      "city": "Select city",
+      "master": "Select worker",
+      "endData": "end date",
+      "startData": "start date",
+      "to": "to"
+    },
+    "clockList": {
+      "more": "More",
+      "hidden": "Hide"
+    }
+  },
+  "MasterRating": {
+    "topic": "Rate worker's Work",
+    "comment": "Send your comment",
+    "numberCharacters": "Characters left",
+    "alert": {
+      "successes": "Review sent successfully",
+      "fail": "Failed to send feedback"
+    }
+  },
+  "SizeClocks": {
+    "label": "Select watch size",
+    "error": "Specify clock size"
+  },
+  "SelectorCity": {
+    "label": "Select city",
+    "error": "Please select city"
+  },
+  "status": {
+    "label": "status",
+    "WAITING": "Waiting",
+    "REJECTED": "Rejected",
+    "ACCEPTED": "Accepted",
+    "DONE": "Done"
+  },
+  "Filter": {
+    "topic": "Select a filter:",
+    "buttonAccept": "Apply Filter",
+    "buttonReset": "Reset filter",
+    "remove": "remove filter"
+  },
+  "Review": {
+    "topic": "Rate worker's Work",
+    "comment": "Send your comment",
+    "numberCharacters": "Characters left",
+    "invalidLink": "The link is no longer available",
+    "toStart": "Go to start page",
+    "successesSend": "Your review was sent successfully"
+  },
+  "MessagePage": {
+    "activated": "Your account has been successfully activated",
+    "info": "To go to your personal account you need to log in",
+    "authorization": "Authorization",
+    "linkInfo": "An activation link has been sent to your email.\n Please go through to activate your account.",
+    "canDo": "In the meantime, you can:",
+    "toStart": "start page"
+  },
+  "buttonAdd": "Add",
+  "buttonClose": "Close",
+  "buttonEdit": "Edit",
+  "limit": "Limit",
+  "emptyList": "List is empty",
+  "language": "Language"
+}

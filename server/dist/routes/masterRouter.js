@@ -1,0 +1,21 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const masterController_1 = __importDefault(require("../controllers/masterController"));
+const checkRoleMiddleware_1 = __importDefault(require("../middleware/checkRoleMiddleware"));
+const express_validator_1 = require("express-validator");
+const global_1 = require("../dto/global");
+const masterRouter = (0, express_1.Router)();
+masterRouter.post("/", masterController_1.default.create);
+masterRouter.get('/', masterController_1.default.getAll);
+masterRouter.get('/:cityId', (0, express_validator_1.param)("cityId").not().isEmpty().isInt({ gt: 0 }), (0, express_validator_1.query)("time").not().isEmpty().isString(), masterController_1.default.getMastersForOrder);
+masterRouter.put('/:masterId', (0, express_validator_1.param)("masterId").not().isEmpty().isInt({ gt: 0 }), (0, checkRoleMiddleware_1.default)(global_1.ROLES.ADMIN), (0, express_validator_1.body)("name").not().isEmpty().isString().trim().escape(), (0, express_validator_1.body)("rating").not().isEmpty().not().isString().isFloat({ gt: -1, lt: 6 }), (0, express_validator_1.body)("cityId").not().isEmpty().isArray(), masterController_1.default.update);
+masterRouter.put('/activate/:masterId', (0, checkRoleMiddleware_1.default)(global_1.ROLES.ADMIN), (0, express_validator_1.param)("masterId").not().isEmpty().isInt({ gt: 0 }), (0, express_validator_1.body)("isActivated").not().isEmpty().isBoolean(), masterController_1.default.activate);
+masterRouter.put('/rating/:uuid', (0, express_validator_1.param)("uuid").isUUID(4), (0, express_validator_1.body)("rating").not().isEmpty().not().isString().isFloat({ gt: -1, lt: 6 }), (0, express_validator_1.body)("review").isString().isLength({ min: 0, max: 1000 }), masterController_1.default.ratingUpdate);
+masterRouter.get('/rating/:masterId', (0, express_validator_1.param)("masterId").not().isEmpty().isInt({ gt: 0 }), masterController_1.default.getRatingReviews);
+masterRouter.get('/rating/link/:uuid', (0, express_validator_1.param)("uuid").isUUID(4), masterController_1.default.checkLink);
+masterRouter.delete('/:masterId', (0, checkRoleMiddleware_1.default)(global_1.ROLES.ADMIN), (0, express_validator_1.param)("masterId").not().isEmpty().isInt({ gt: 0 }), masterController_1.default.deleteOne);
+exports.default = masterRouter;
